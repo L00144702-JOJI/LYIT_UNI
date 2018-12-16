@@ -4,12 +4,8 @@ public class L00144702_User_Login
 {
 	public static void main(String args[])
 	{
-		String User1="Admin";
-		String Pwd1="Admin123";
-		String User2="Guest";
-		String Pwd2="Guest2";
-		String User;
-		String Pwd;
+		String User1="Admin", Pwd1="Admin123", User2="Guest1", Pwd2="Guest111", User3='Guest2", Pwd3="Guest222";
+		String User, Pwd;
 			
 		Scanner s=new Scanner(System.in);
 			
@@ -25,7 +21,11 @@ public class L00144702_User_Login
 		}
 		else if(User.equals(User2) && (Pwd.equals(Pwd2)))
 		{
-			System.out.println("Welcome Guest");
+			System.out.println("Welcome Guest2");
+		}
+		else if(User.equals(user3) && (Pwd.equals(Pwd3)))
+		{
+			System.out.println("Welcome Guest3");
 		}
 		else
 		{
