@@ -18,6 +18,7 @@ public class L00144702_User_Login
 		System.out.println("Ener Password:");
 		Pwd=s.nextLine();
 		
+		//Checking the condition for user login
 		if(User.equals(User1) && (Pwd.equals(Pwd1)))
 		{
 			System.out.println("Welcome Admin");
