@@ -4,7 +4,7 @@ public class L00144702_Std_Details
 {
 	public static void main(String args[])
 	{
-		String Std_Name, Std_DOB, Std_LNo, Std_Address, Std_Place, Std_County, Std_Country;
+		String Std_Name, Std_DOB, Std_LNo, Std_Address, Std_Place, Std_County, Std_Country, Std_Course;
 		Integer Std_PNo;
 		
 		Scanner sc=new Scanner(System.in);
@@ -25,6 +25,8 @@ public class L00144702_Std_Details
 		Std_Country=sc.nextLine();
 		System.out.println("Student Phone No.:");
 		Std_PNo=sc.nextInt();
+		System.out.println("Student Course:");
+		Std_Course=sc.nextLine();
 		System.out.println("\nStudent Name:"+Std_Name);
 		System.out.println("Student DOB:"+Std_DOB);
 		System.out.println("Student LNumber:"+Std_LNo);
@@ -33,5 +35,6 @@ public class L00144702_Std_Details
 		System.out.println("Student Place:"+Std_Place);
 		System.out.println("Student County:"+Std_County);
 		System.out.println("Student Country:"+Std_Country);
+		System.out.println("Student Course:"+Std_Course);
 	}
 }
