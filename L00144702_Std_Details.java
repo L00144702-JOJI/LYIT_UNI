@@ -8,7 +8,7 @@ public class L00144702_Std_Details
 		Integer Std_PNo;
 		
 		Scanner sc=new Scanner(System.in);
-		
+		//Enter the student details
 		System.out.println("Student Name:");
 		Std_Name=sc.nextLine();
 		System.out.println("Student Date of Birth:");
