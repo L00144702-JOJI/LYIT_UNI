@@ -1,0 +1,23 @@
+---
+- hosts: remote
+  tasks:
+  
+  - name: create dir
+    file:
+      path: /home/joji-l00144702-dockerhost/Desktop/web002
+      state: directory
+
+  - name: copy files
+    copy:
+      src: /etc/ansible/Ansible-joji/joji-web2/{{item}}
+      dest: /home/joji-l00144702-dockerhost/Desktop/web002
+    with_items:
+         ['Dockerfile','index.html','web02.yml']
+
+  - name: build image
+    docker_image:
+       path: /home/joji-l00144702-dockerhost/Desktop/web002
+       name: img01
+
+  - name: build container
+    command: docker run -d --name cont01 -p 70:80 img01

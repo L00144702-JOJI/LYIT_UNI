@@ -1,0 +1,25 @@
+---
+- hosts: remote
+  tasks:
+  
+  - name: create dir
+    file:
+      path: /home/joji-l00144702-dockerhost/Desktop/mysql01
+      state: directory
+
+  - name: copy files
+    copy:
+      src: /etc/ansible/Ansible-joji/jojidb/01/
+      dest: /home/joji-l00144702-dockerhost/Desktop/mysql01/
+    with_items:
+        ['Dockerfile','sql01.yml','std.sql']
+
+  - name: Build Image
+    docker_image:
+       path: /home/joji-l00144702-dockerhost/Desktop/mysql01
+       name: sqlimg01
+
+  - name: Creating Container
+    command: docker run --name sqlcont01 -d -p 3306:3306 sqlimg01
+
+  

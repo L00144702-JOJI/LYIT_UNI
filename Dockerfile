@@ -1,0 +1,11 @@
+FROM mysql:latest
+MAINTAINER joji-l00144702
+
+ENV MYSQL_ROOT_PASSWORD TJP777
+ENV MYSQL_DATABASE jojidb
+ENV MYSQL_USER tjoji
+ENV MYSQL_PASSWORD 44132
+
+ADD std.sql /docker-entrypoint-initdb.d
+
+EXPOSE 3306
